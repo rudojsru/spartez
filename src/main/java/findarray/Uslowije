@@ -1,0 +1,11 @@
+Find Array
+Implement the findarray.MyFindArray.findArray(int[] array, int[] subArray) method that returns the starting position of the last occurence of the subArray within the array, or -1 if the subArray cannot be found.
+
+Sample Input:
+
+[4,3,3,7,8] and [3,7] should return 2.
+[1,3,5] and [1] should return 0.
+[7,8,9] and [8,9,10] should return -1.
+[0,0,3,7,0,3,7,0] and [3,7] should return 5.
+Your solution must be implemented in the existing findarray.MyFindArray class implementing the FindArray interface.
+You can add tests to the MyFindArrayTest class and Build the project to self-assess your solution.
