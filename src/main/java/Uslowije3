@@ -15,7 +15,7 @@ public class JavaClass {
     private JavaClass() {
     }
 }
-
+ 
 
 // Write the text below. You can use Markdown syntax to format the text.
 
