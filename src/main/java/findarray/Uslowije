@@ -1,5 +1,6 @@
 Find Array
-Implement the findarray.MyFindArray.findArray(int[] array, int[] subArray) method that returns the starting position of the last occurence of the subArray within the array, or -1 if the subArray cannot be found.
+Implement the findarray.MyFindArray.findArray(int[] array, int[] subArray) method that returns the starting position
+of the last occurence of the subArray within the array, or -1 if the subArray cannot be found.
 
 Sample Input:
 

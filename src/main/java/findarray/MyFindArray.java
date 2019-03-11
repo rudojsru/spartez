@@ -3,9 +3,9 @@
    Unauthorized distribution of this file, derived work or information about its
    content, via any medium, is strictly prohibited.
  */
-package findarray;
+package main.java.findarray;
 
-public class MyFindArray implements FindArray {
+public class MyFindArray implements main.java.findarray.FindArray {
 
     @Override
     public int findArray(int[] array, int[] subArray) {
@@ -13,25 +13,43 @@ public class MyFindArray implements FindArray {
         if (array.length < subArray.length) {
             return -1;
         }
-        int licznik = 0;
         boolean flag = false;
-        while (subArray.length > licznik) {
+        int wykonanyWarunek=0;
+
+
             for (int i = 0; i < array.length; i++) {
-                if (array[i] == subArray[licznik]) {
-                    flag = true;
+                if (array[i] == subArray[0]) {
+                     int licznik=0;
+                     int i2=i;
+                     if(subArray.length-1==0){
+                         flag = true;
+                         wykonanyWarunek=i2;
+                     }
+
+                    while ( subArray.length-1>licznik
+                            && array.length-1>i
+                            && array[i]==subArray[licznik]) {
+                        i++; licznik++;
+                        if(array[i]==subArray[licznik]){
+                            if(subArray.length-1==licznik){
+                                flag = true;
+                                wykonanyWarunek=i2;
+                            }
+                        }else{
+                            flag=false;
+                            i--;
+                            break;
+                        }
+                    }
                 }
             }
-            if (flag == false) {
-                return -1;
-            }
-            licznik++;
 
+
+        if (flag == false) {
+            return -1;
         }
-        for (int i = array.length - 1; i >= 0; i--) {
-            if (array[i] == subArray[0])
-                licznik = i;
-        }
-        return licznik;
+
+        return wykonanyWarunek;
     }
 
 }

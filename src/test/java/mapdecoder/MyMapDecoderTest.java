@@ -5,6 +5,7 @@
  */
 package test.java.mapdecoder;
 
+import main.java.mapdecoder.MyMapDecoder;
 import org.junit.Before;
 import org.junit.Test;
 

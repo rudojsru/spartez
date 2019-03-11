@@ -3,7 +3,7 @@
    Unauthorized distribution of this file, derived work or information about its
    content, via any medium, is strictly prohibited.
  */
-package findarray;
+package  main.java.findarray;
 
 /**
  * Read only file - please do not change.

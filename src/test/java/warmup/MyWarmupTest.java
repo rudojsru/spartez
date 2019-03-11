@@ -5,6 +5,8 @@
  */
 package test.java.warmup;
 
+import main.java.warmup.MyWarmup;
+import main.java.warmup.Warmup;
 import org.junit.Before;
 import org.junit.Test;
 

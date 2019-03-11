@@ -1,6 +1,7 @@
 
 package main.java.mapdecoder;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class MyMapDecoder implements MapDecoder {
