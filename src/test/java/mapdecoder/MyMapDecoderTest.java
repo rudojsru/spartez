@@ -39,6 +39,35 @@ public class MyMapDecoderTest {
 		assertEquals(expected, result);
 	}
 
+	@Test
+	public void decoderZeroString(){
+		//given
+		final String input="";
+		//when
+		Map<String,String> result=mapDecoder.decode(input);
+		//then
+		Map<String, String> expected = new HashMap<>();
+		assertEquals(result, expected);
+	}
+	@Test
+	public void decoderNull(){
+		//given
+		final String input=null;
+		//when
+		Map<String,String> result=mapDecoder.decode(input);
+		//then
+		assertEquals(null, result);
+	}
+	@Test
+	public void decoderBadString(){
+		//given
+		final String input="one1&two=2";
+		//when
+		Map<String, String> result=mapDecoder.decode(input);
+		//then
+		assertEquals(new IllegalArgumentException(), result);
+	}
+
 	/*
 		Add more tests here if you like
 	*/
