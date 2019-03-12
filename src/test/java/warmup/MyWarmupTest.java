@@ -33,7 +33,38 @@ public class MyWarmupTest {
 		assertEquals(2, result);
 	}
 
+	@Test
+	public void findFromDublicat() {
+		final int[] array = {1, 2, 2, 1};
+
+		//when
+		int result = warmup.findMax(array);
+
+		//then
+		assertEquals(1, result);
+
 	/*
 		Add more tests here if you like
 	*/
+	}
+
+	@Test
+	public void findZero(){
+		final int [] array ={};
+		//when
+		int result = warmup.findMax(array);
+
+		//then
+		assertEquals(-1, result);
+	}
+
+	@Test
+	public void dindOneElement(){
+		final int[] array ={5};
+		//when
+		int result = warmup.findMax(array);
+
+		//then
+		assertEquals(0, result);
+	}
 }
