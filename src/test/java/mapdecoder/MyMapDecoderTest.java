@@ -65,7 +65,20 @@ public class MyMapDecoderTest {
 		//when
 		Map<String, String> result=mapDecoder.decode(input);
 		//then
-		assertEquals(new IllegalArgumentException(), result);
+		Map<String, String> expected = new HashMap<>();
+		expected.put("two","2");
+		assertEquals(expected, result);
+	}
+
+	@Test
+	public void decoderBadEmpersant(){
+		//given
+		final String input="one=1two=2";
+		//when
+		Map<String, String> result=mapDecoder.decode(input);
+		//then
+		Map<String, String> expected = new HashMap<>();
+		assertEquals(expected, result);
 	}
 
 	/*
